@@ -28,6 +28,12 @@ article {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    border-width: 1px;
+    margin-bottom: 16px;
+}
+
+.content__description {
+    padding: 0 16px 0 16px;
 }
 
 .description__text {
@@ -38,7 +44,7 @@ article {
     font-size: 28px;
     font-weight: 700;
     line-height: 33.6px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .description__text .text__subtitle {
