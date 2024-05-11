@@ -1,11 +1,3 @@
-body {
-    font-family: 'Noto Sans', sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 article {
     width: 1296px;
     display: flex;

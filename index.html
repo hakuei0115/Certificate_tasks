@@ -4,115 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/reset.css">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/header.css">
     <link rel="icon" href="public/image/logo.ico" type="image/x-icon">
     <title>2024 軟體工程師體驗營</title>
 </head>
 <body>
-    <main>
-        <article>
-            <div class="content item1">
-                <div class="content__image">
-                    <img src="public/image/image1.png" alt="start journey order platform" onerror="this.style.display='none';">
-                </div>
-                <div class="content__description">
-                    <div class="description__text">
-                        <p class="text__title">星際旅行訂票平台</p>
-                        <p class="text__subtitle">悠遊宇宙的夢想，從這裡開始實現</p>
-                    </div>
-                    <div class="description__tags">
-                        <span class="tags__item">網頁設計</span>
-                        <span class="tags__item">響應式</span>
-                        <span class="tags__item">Bootstrap</span>
-                    </div>
-                </div>
-            </div>
+    <header>
+        <div class="logo">
+            <img src="public/image/logo.svg" alt="logo">
+        </div>
+        <div class="header__navBar">
+            <nav>
+                <ul>
+                    <li><a href="/index.html">首頁</a></li>
+                    <li><a href="/Portfolio.html">作品集</a></li>
+                    <li><a href="#">服務項目</a></li>
+                    <li><a href="#">部落格</a></li>
+                    <li><a href="#">聯絡我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-            <div class="content item2">
-                <div class="content__image">
-                    <img src="public/image/image2.png" alt="start journey order platform" onerror="this.style.display='none';">
-                </div>
-                <div class="content__description">
-                    <div class="description__text">
-                        <p class="text__title">理財App</p>
-                        <p class="text__subtitle">提供完善的財務分析工具，幫助用戶控制財務</p>
-                    </div>
-                    <div class="description__tags">
-                        <span class="tags__item">APP設計</span>
-                        <span class="tags__item">iOS</span>
-                        <span class="tags__item">React</span>
-                    </div>
-                </div>
-            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const url = window.location.pathname;
+            const navItems = document.querySelectorAll('.header__navBar ul li a');
 
-            <div class="content item3">
-                <div class="content__image">
-                    <img src="public/image/image3.png" alt="start journey order platform" onerror="this.style.display='none';">
-                </div>
-                <div class="content__description">
-                    <div class="description__text">
-                        <p class="text__title">醫美診所官網</p>
-                        <p class="text__subtitle">永保青春的秘密，從粹究開始</p>
-                    </div>
-                    <div class="description__tags">
-                        <span class="tags__item">網頁設計</span>
-                        <span class="tags__item">響應式</span>
-                        <span class="tags__item">WordPress</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content item4">
-                <div class="content__image">
-                    <img src="public/image/image4.png" alt="start journey order platform" onerror="this.style.display='none';">
-                </div>
-                <div class="content__description">
-                    <div class="description__text">
-                        <p class="text__title">美美美早餐店 POS 機 UI Design</p>
-                        <p class="text__subtitle">訂單送單一目瞭然，自動報表分析好輕鬆</p>
-                    </div>
-                    <div class="description__tags">
-                        <span class="tags__item">UI 設計</span>
-                        <span class="tags__item">前端開發</span>
-                        <span class="tags__item">Wix</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content item5">
-                <div class="content__image">
-                    <img src="public/image/image5.png" alt="start journey order platform" onerror="this.style.display='none';">
-                </div>
-                <div class="content__description">
-                    <div class="description__text">
-                        <p class="text__title">電影院訂票系統</p>
-                        <p class="text__subtitle">三步驟完成訂單，電腦手機都支援</p>
-                    </div>
-                    <div class="description__tags">
-                        <span class="tags__item">前端開發</span>
-                        <span class="tags__item">後端支援</span>
-                        <span class="tags__item">Vue</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content item6">
-                <div class="content__image">
-                    <img src="public/image/image6.png" alt="start journey order platform" onerror="this.style.display='none';">
-                </div>
-                <div class="content__description">
-                    <div class="description__text">
-                        <p class="text__title">巧克巧克形象官網設計</p>
-                        <p class="text__subtitle">三步驟完成訂單，電腦手機都支援</p>
-                    </div>
-                    <div class="description__tags">
-                        <span class="tags__item">UI 設計</span>
-                        <span class="tags__item">設計系統</span>
-                        <span class="tags__item">網路電商</span>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </main>
+            navItems.forEach(item => {
+                if (item.getAttribute('href') === url) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
