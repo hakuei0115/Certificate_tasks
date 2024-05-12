@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="public/css/reset.css">
     <link rel="stylesheet" href="public/css/header.css">
     <link rel="stylesheet" href="public/css/portfolio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="icon" href="public/image/logo.ico" type="image/x-icon">
     <title>2024 軟體工程師體驗營</title>
 </head>
@@ -14,18 +15,22 @@
         <div class="logo">
             <img src="public/image/logo.svg" alt="logo">
         </div>
-        <div class="header__navBar">
-            <nav>
-                <ul>
-                    <li><a href="/index.html">首頁</a></li>
-                    <li><a href="/Portfolio.html">作品集</a></li>
-                    <li><a href="#">服務項目</a></li>
-                    <li><a href="#">部落格</a></li>
-                    <li><a href="#">聯絡我</a></li>
-                </ul>
-            </nav>
-        </div>
+        <button type="button" class="btn">
+            <span class="material-symbols-outlined hamburger">menu</span>
+            <span class="material-symbols-outlined closure">close</span>
+        </button>
+        <nav class="header__navBar">
+            <ul>
+                <li><a href="/index.html">首頁</a></li>
+                <li><a href="/Portfolio.html">作品集</a></li>
+                <li><a href="#">服務項目</a></li>
+                <li><a href="#">部落格</a></li>
+                <li><a href="#">聯絡我</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <div id="overlay"></div>
 
     <article>
         <div class="content item1">
@@ -141,6 +146,20 @@
                     item.classList.add('active');
                 }
             });
+        });
+
+        document.querySelector('.btn').addEventListener('click', () => {
+            let hamburgerDisplay = window.getComputedStyle(document.querySelector('.hamburger')).display;
+            if (hamburgerDisplay === 'block') {
+                document.querySelector('.hamburger').style.display = 'none';
+                document.querySelector('.closure').style.display = 'block';
+                document.getElementById('overlay').style.display = 'none';
+            } else {
+                document.querySelector('.hamburger').style.display = 'block';
+                document.querySelector('.closure').style.display = 'none';
+                document.getElementById('overlay').style.display = 'block';
+            }
+            document.querySelector('.header__navBar').classList.toggle('active');
         });
     </script>
 </body>
