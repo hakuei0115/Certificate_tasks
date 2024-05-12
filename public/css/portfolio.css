@@ -1,5 +1,5 @@
 article {
-    width: 1296px;
+    max-width: 1296px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

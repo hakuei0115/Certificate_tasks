@@ -7,13 +7,13 @@ body {
 }
 
 header {
-    width: 1920px;
+    max-width: 1920px;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
-    border-bottom: 1px solid #F1F1F1;
     padding: 32px;
+    border-bottom: 1px solid #F1F1F1;
 }
 
 header img {
@@ -21,17 +21,72 @@ header img {
     height: 0 auto;
 }
 
-.header__navBar nav ul {
+.btn {
+    display: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+}
+
+.header__navBar.active {
+    display: block;
+}
+
+.header__navBar ul {
     display: flex;
     list-style: none;
     gap: 40px;
 }
 
-.header__navBar nav ul li{
+.header__navBar ul li{
+    position: relative;
     padding: 4px 8px 4px 8px;
 }
 
-.header__navBar nav ul li a {
+.header__navBar .li-border {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.header__navBar ul li:hover .li-border {
+    opacity: 1;
+}
+
+.leftUP {
+    top: 0;
+    left: 0;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.leftDown {
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.rightUP {
+    top: 0;
+    right: 0;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.rightDown {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.header__navBar ul li a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
@@ -39,10 +94,50 @@ header img {
     font-weight: 600;
 }
 
-.header__navBar nav ul li a:hover {
-    color: #919191;
+#overlay {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
-.header__navBar nav ul li a.active {
-    border-bottom: 3px solid #000;
+@media (min-width: 1921px) {
+    header {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 8px 12px 8px 12px;
+        z-index: 1;
+    }
+
+    .header__navBar {
+        width: 100%;
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .header__navBar ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .btn {
+        display: block;
+    }
+
+    .btn .closure {
+        display: none;
+    }
 }
