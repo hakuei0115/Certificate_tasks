@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px;
+    padding: 32px 312px 32px 312px;
     border-bottom: 1px solid #F1F1F1;
 }
 
