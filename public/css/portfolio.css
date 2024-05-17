@@ -1,4 +1,4 @@
-article {
+.container {
     max-width: 1296px;
     display: flex;
     justify-content: center;
@@ -17,11 +17,10 @@ article {
 }
 
 .content__image img {
+    display: block;
     width: 100%;
-    height: auto;
     border-radius: 8px;
     border-width: 1px;
-    margin-bottom: 16px;
 }
 
 .content__description {
@@ -40,17 +39,16 @@ article {
 }
 
 .description__text .text__subtitle {
-    font-size: 16px;
     line-height: 24px;
     color: #919191;
 }
 
-.description__tags {
+.description__hashtags {
     display: flex;
     gap: 16px;
 }
 
-.description__tags .tags__item {
+.description__hashtags .tags__item {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -58,4 +56,5 @@ article {
     background-color: #F1F1F1;
     padding: 4px 12px 4px 12px;
     border-radius: 16px;
+    cursor: pointer;
 }
