@@ -60,14 +60,14 @@ footer {
     color: #FFFFFF;
 }
 
-.instagram,
-.facebook {
+.link__button.instagram,
+.link__button.facebook {
     background-color: #FFFFFF;
     border: 1px solid #C1C1C1;
 }
 
-.instagram p,
-.facebook p {
+.link__button.instagram p,
+.link__button.facebook p {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
