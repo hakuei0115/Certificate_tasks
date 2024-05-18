@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="header__logo">
             <img src="public/image/logo.svg" alt="header_logo">
         </div>
         <button type="button" class="btn">
@@ -67,7 +67,7 @@
 
     <footer>
         <div class="footer__info">
-            <div class="logo">
+            <div class="footer__logo">
                 <img src="public/image/logo.svg" alt="footer_logo">
             </div>
             <div class="footer__content">
@@ -135,7 +135,7 @@
             const hamburger = document.querySelector('.hamburger');
             const closure = document.querySelector('.closure');
 
-            if (window.innerWidth > 768) {
+            if (window.innerWidth >= 768) {
                 overlay.style.display = 'none';
                 navBar.classList.remove('active');
                 btn.style.display = 'none';
