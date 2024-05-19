@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
 }
 
-header {
+.main-header {
     max-width: 100%;
     position: relative;
     display: flex;
@@ -105,25 +105,25 @@ header {
 }
 
 @media (min-width: 1025px) and (max-width: 1200px){
-    header {
+    .main-header {
         padding: 24px 80px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    header {
+    .main-header {
         padding: 24px 80px;
     }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
-    header {
+    .main-header {
         padding: 16px 24px;
     }
 }
 
 @media (max-width: 425px) {
-    header {
+    .main-header {
         padding: 8px 12px;
         z-index: 1;
     }

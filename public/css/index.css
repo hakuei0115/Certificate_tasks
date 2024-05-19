@@ -1,0 +1,130 @@
+.section__about_me {
+    max-width: 100%;
+    max-height: 792px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 312px;
+    column-gap: 24px;
+}
+
+.article__introduce header {
+    margin-bottom: 24px;
+}
+
+.article__introduce header h1 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+.div__introduce_detail {
+    font-size: 20px;
+    line-height: 30px;
+    color: #5B5B5B;
+    margin-bottom: 16px;
+}
+
+.text-container {
+    position: relative;
+    display: inline-block;
+}
+
+.text {
+    position: relative;
+    z-index: 2;
+}
+
+.underline {
+    position: absolute;
+    z-index: 1;
+}
+
+.underline.one {
+    width: 148px;
+    left: 0;
+    bottom: 5px;
+}
+
+.underline.two {
+    width: 119px;
+    left: 0;
+    bottom: 5px;
+}
+
+.article__introduce>p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #C1C1C1;
+}
+
+.article__icons {
+    display: flex;
+    column-gap: 24px;
+    margin-top: 60px;
+}
+
+.about_me_image img{
+    display: block;
+}
+
+.section__portfolio {
+    padding: 120px 0 0 0;
+}
+
+.portfolio__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+    margin-bottom: 80px;
+}
+
+.portfolio__header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.4px;
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
+    .section__about_me {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .article__introduce {
+        padding: 40px 0;
+        text-align: center;
+        order: 1;
+    }
+
+    .article__introduce header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.4px;
+    }
+
+    .div__introduce_detail span:first-child {
+        display: block;
+    }
+    
+    .div__introduce_detail>p {
+        margin-top: 8px;
+    }
+
+    .article__icons {
+        margin-top: 24px;
+        justify-content: center;
+        column-gap: 16px;
+    }
+}
