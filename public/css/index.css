@@ -1,5 +1,4 @@
 .section__about_me {
-    max-width: 100%;
     max-height: 792px;
     display: flex;
     justify-content: space-between;
@@ -25,34 +24,46 @@
     margin-bottom: 16px;
 }
 
-.text-container {
-    position: relative;
-    display: inline-block;
-}
-
-.text {
-    position: relative;
-    z-index: 2;
+.div__introduce_detail>p {
+    color: #5b5b5b;
+    font-size: 20px;
 }
 
 .underline {
+    position: relative;
+}
+
+.underline-1 {
+    padding: 0 8px;
+}
+
+.underline-2 {
+    padding-left: 8px;
+}
+
+.underline-1::after {
     position: absolute;
-    z-index: 1;
-}
-
-.underline.one {
+    content: "";
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true");
     width: 148px;
+    height: 8px;
+    bottom: 0;
     left: 0;
-    bottom: 5px;
+    z-index: -1;
 }
 
-.underline.two {
+.underline-2::after {
+    position: absolute;
+    content: "";
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true");
     width: 119px;
-    left: 0;
-    bottom: 5px;
+    height: 8px;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 
-.article__introduce>p{
+.article__introduce>p {
     font-size: 16px;
     line-height: 24px;
     color: #C1C1C1;
@@ -64,7 +75,7 @@
     margin-top: 60px;
 }
 
-.about_me_image img{
+.about_me_image img {
     display: block;
 }
 
@@ -76,25 +87,195 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 16px;
     margin-bottom: 80px;
 }
 
 .portfolio__header h2 {
+    width: 372px;
+    position: relative;
     font-size: 32px;
     font-weight: 600;
     line-height: 38.4px;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio__header h2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #c1c1c1;
+    top: calc(50% - 1px);
+    z-index: -1;
+}
+
+.portfolio__header h2 span::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #c1c1c1;
+    border-radius: 50%;
+    top: calc(50% - 3px);
+    left: 0;
+}
+
+.portfolio__header h2 span::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #c1c1c1;
+    border-radius: 50%;
+    top: calc(50% - 3px);
+    right: 0;
+}
+
+.portfolio__header h2 span {
+    padding: 0 16px;
+    background-color: #FFFFFF;
+}
+
+.portfolio__item {
+    height: 800px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio__item.order_platform {
+    background-image: url(../image/order-platform-bg.png);
+}
+
+.portfolio__item.order_platform picture {
+    position: absolute;
+    top: 80px;
+    left: 312px;
+    height: 0 auto;
+}
+
+/* for public content style */
+.order_platform_content,
+.manage_finances_app_content,
+.clinic_website_content {
+    max-width: 562px;
+    max-height: 400px;
+    position: absolute;
+    top: 200px;
+    border-radius: 24px;
+    padding: 80px 40px 56px 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.order_platform_content {
+    left: 1081px;
+}
+
+.order_platform_introduce,
+.manage_finances_app_introduce,
+.clinic_website_introduce {
+    padding: 0 0 40px 0;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.order_platform__title,
+.manage_finances_app__title,
+.clinic_website__title {
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.order_platform__title h3,
+.manage_finances_app__title h3,
+.clinic_website__title h3{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+    margin-bottom: 8px;
+}
+
+.order_platform__title p,
+.manage_finances_app__title p,
+.clinic_website__title p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.order_platform_tags,
+.manage_finances_app_tags,
+.clinic_website_tags {
+    display: flex;
+    column-gap: 16px;
+}
+
+.tags {
+    border-radius: 16px;
+    padding: 4px 12px;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.order_platform_button,
+.manage_finances_app_button,
+.clinic_website_button {
+    display: flex;
+    column-gap: 8px;
+    padding: 16px 32px;
+    background-color: #000000;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.portfolio__item.manage_finances_app {
+    background-image: url(../image/manage-finances-app-lg.png);
+}
+
+.manage_finances_app_mask {
+    width: 948px;
+    height: 100%;
+    background-color: rgba(10, 16, 19, 0.5);
+}
+
+.manage_finances_app_content {
+    left: 312px;
+}
+
+.portfolio__item.clinic_website {
+    background-image: 
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url(../image/clinic-website-bg.png);
+}
+
+.portfolio__item.clinic_website picture {
+    position: absolute;
+    top: 176px;
+    left: 312px;
+    height: 0 auto;
+}
+
+.clinic_website_content {
+    left: 1082px;
 }
 
 
-@media (min-width: 1025px) and (max-width: 1200px) {
-}
+@media (min-width: 1025px) and (max-width: 1200px) {}
 
-@media (min-width: 769px) and (max-width: 1024px) {
-}
+@media (min-width: 769px) and (max-width: 1024px) {}
 
-@media (min-width: 426px) and (max-width: 768px) {
-}
+@media (min-width: 426px) and (max-width: 768px) {}
 
 @media (max-width: 425px) {
     .section__about_me {
@@ -117,7 +298,7 @@
     .div__introduce_detail span:first-child {
         display: block;
     }
-    
+
     .div__introduce_detail>p {
         margin-top: 8px;
     }
