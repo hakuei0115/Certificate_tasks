@@ -7,7 +7,8 @@
     column-gap: 24px;
 }
 
-.article__introduce header {
+/* FIXME: */
+.article__introduce header { 
     margin-bottom: 24px;
 }
 
@@ -63,7 +64,7 @@
     z-index: -1;
 }
 
-.article__introduce>p {
+.article__introduce section>p {
     font-size: 16px;
     line-height: 24px;
     color: #C1C1C1;
@@ -289,23 +290,50 @@
         order: 1;
     }
 
-    .article__introduce header h1 {
+    .article__introduce section {
+        width: 268px;
+        height: 255px;
+    }
+
+    .article__introduce section header h1 {
         font-size: 32px;
         font-weight: 700;
         line-height: 38.4px;
     }
 
-    .div__introduce_detail span:first-child {
-        display: block;
+    .div__introduce_detail>p {
+        margin-bottom: 8px;
     }
 
-    .div__introduce_detail>p {
-        margin-top: 8px;
+    .div__introduce_detail span:first-child {
+        content: "\A";
+        white-space: pre;
+    }
+
+    .underline-1 {
+        padding-left: 0px;
     }
 
     .article__icons {
         margin-top: 24px;
         justify-content: center;
         column-gap: 16px;
+    }
+
+    .portfolio__header {
+        margin-bottom: 40px;
+    }
+
+    .portfolio__header h2 {
+        width: 249px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.8px;
+    }
+
+    .order_platform,
+    .manage_finances_app,
+    .clinic_website {
+        display: none;
     }
 }
