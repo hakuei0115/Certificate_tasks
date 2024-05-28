@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="icon" href="public/image/logo.ico" type="image/x-icon">
     <title>2024 軟體工程師體驗營</title>
 </head>
@@ -66,7 +64,7 @@
     <div id="overlay"></div>
     <main class="main__container">
         <section class="section__about_me">
-            <article class="article__introduce" data-aos="zoom-in">
+            <article class="article__introduce">
                 <section>
                     <header>
                         <h1>HI！我是Noel</h1>
@@ -90,7 +88,7 @@
                 </div>
             </article>
             
-            <picture class="about_me_image" data-aos="zoom-in-left">
+            <picture class="about_me_image">
                 <source media="(max-width: 425px)" srcset="public/image/aboutme-sm.png">
                 <img src="public/image/aboutme-lg.png" alt="About me">
             </picture>
@@ -104,10 +102,11 @@
             </header>
             <article class="portfolio__content">
                 <div class="portfolio__item order_platform">
-                    <picture data-aos="fade-right">
+                    <div class="order_platform_bg"></div>
+                    <picture>
                         <img src="public/image/order-platform-lg.png" alt="order_platform">
                     </picture>
-                    <div class="order_platform_content" data-aos="fade-left">
+                    <div class="order_platform_content">
                         <div class="order_platform_introduce">
                             <div class="order_platform__title">
                                 <h3>星際旅行訂票平台</h3>
@@ -126,8 +125,9 @@
                     </div>
                 </div>
                 <div class="portfolio__item manage_finances_app">
+                    <div class="manage_finances_app_bg"></div>
                     <div class="manage_finances_app_mask"></div>
-                    <div class="manage_finances_app_content" data-aos="fade-up-right">
+                    <div class="manage_finances_app_content">
                         <div class="manage_finances_app_introduce">
                             <div class="manage_finances_app__title">
                                 <h3>理財APP</h3>
@@ -146,11 +146,11 @@
                     </div>
                 </div>
                 <div class="portfolio__item clinic_website">
-                    <picture data-aos="fade-right">
-                        <!-- <source media="(max-width: 425px)" srcset="public/image/clinic_website-sm.png"> -->
+                    <div class="clinic_website_bg"></div>
+                    <picture>
                         <img src="public/image/clinic-website.png" alt="clinic_website">
                     </picture>
-                    <div class="clinic_website_content" data-aos="fade-left">
+                    <div class="clinic_website_content">
                         <div class="clinic_website_introduce">
                             <div class="clinic_website__title">
                                 <h3>醫美診所官網</h3>
@@ -206,8 +206,6 @@
     </footer>
 
     <script>
-        AOS.init();
-
         document.addEventListener('DOMContentLoaded', () => {
             const url = window.location.pathname;
             const navItems = document.querySelectorAll('.header__navBar ul li a');
