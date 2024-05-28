@@ -7,12 +7,11 @@
     column-gap: 24px;
 }
 
-/* FIXME: */
-.article__introduce header { 
+.article__introduce section header { 
     margin-bottom: 24px;
 }
 
-.article__introduce header h1 {
+.article__introduce section header h1 {
     font-size: 40px;
     font-weight: 600;
     line-height: 48px;
@@ -141,12 +140,17 @@
 .portfolio__item {
     height: 800px;
     position: relative;
-    background-size: cover;
-    background-position: center;
 }
 
-.portfolio__item.order_platform {
+.order_platform_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../image/order-platform-bg.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .portfolio__item.order_platform picture {
@@ -236,8 +240,16 @@
     cursor: pointer;
 }
 
-.portfolio__item.manage_finances_app {
+.manage_finances_app_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../image/manage-finances-app-lg.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 .manage_finances_app_mask {
@@ -250,7 +262,12 @@
     left: 312px;
 }
 
-.portfolio__item.clinic_website {
+.clinic_website_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: 
         linear-gradient(
             180deg,
@@ -258,6 +275,8 @@
             rgba(0, 0, 0, 0.5)
         ),
         url(../image/clinic-website-bg.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .portfolio__item.clinic_website picture {
@@ -271,7 +290,6 @@
     left: 1082px;
 }
 
-
 @media (min-width: 1025px) and (max-width: 1200px) {}
 
 @media (min-width: 769px) and (max-width: 1024px) {}
@@ -279,6 +297,7 @@
 @media (min-width: 426px) and (max-width: 768px) {}
 
 @media (max-width: 425px) {
+    /* FIXME: 檢查哪個元素超版了 */
     .section__about_me {
         flex-direction: column;
         padding: 0;
@@ -320,6 +339,15 @@
         column-gap: 16px;
     }
 
+    .about_me_icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section__portfolio {
+        padding: 40px 0 80px 0;
+    }
+
     .portfolio__header {
         margin-bottom: 40px;
     }
@@ -331,9 +359,138 @@
         line-height: 28.8px;
     }
 
-    .order_platform,
-    .manage_finances_app,
-    .clinic_website {
+    .portfolio__item.order_platform {
+        max-height: 578px;
+        margin-bottom: 48px;
+    }
+
+    .order_platform_bg {
+        height: 390px;
+    }
+
+    .portfolio__item.order_platform picture {
+        top: 93px;
+        left: 40px;
+    }
+
+    .portfolio__item.order_platform picture img {
+        width: 295px;
+        height: 297px;
+    }
+
+    .order_platform_content,
+    .manage_finances_app_content,
+    .clinic_website_content {
+        width: 375px;
+        max-height: 164px;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+        padding: 0 24px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .order_platform_introduce,
+    .manage_finances_app_introduce,
+    .clinic_website_introduce {
+        padding: 0;
+        border-bottom: none;
+        text-align: center;
+    }
+
+    .order_platform__title,
+    .manage_finances_app__title,
+    .clinic_website__title {
+        margin-bottom: 16px;
+    }
+
+    .order_platform__title h3,
+    .manage_finances_app__title h3,
+    .clinic_website__title h3{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #1E1E1E;
+        margin-bottom: 8px;
+    }
+
+    .order_platform__title p,
+    .manage_finances_app__title p,
+    .clinic_website__title p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #5B5B5B;
+    }
+
+    .order_platform_tags,
+    .manage_finances_app_tags,
+    .clinic_website_tags {
+        display: flex;
+        justify-content: center;
+        column-gap: 8px;
+    }
+
+    .tags {
+        border-radius: 16px;
+        padding: 4px 12px;
+        background-color: #F1F1F1;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .order_platform_button,
+    .manage_finances_app_button,
+    .clinic_website_button {
+        display: flex;
+        column-gap: 8px;
+        padding: 8px 16px;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .portfolio__item.manage_finances_app {
+        max-height: 602px;
+        margin-bottom: 48px;
+    }
+
+    .manage_finances_app_bg {
+        width: 375px;
+        height: 390px;
+        background-image: url(../image/manage-finances-app-sm.png);
+        z-index: 0;
+    }
+
+    .manage_finances_app_mask {
         display: none;
+    }
+
+    .portfolio__item.clinic_website {
+        max-height: 578px;
+    }
+
+    .clinic_website_bg {
+        width: 375px;
+        height: 390px;
+    }
+
+    .portfolio__item.clinic_website picture {
+        top: 90px;
+        left: 40px;
+    }
+
+    .portfolio__item.clinic_website picture img {
+        width: 295px;
+        height: 210px;
     }
 }
