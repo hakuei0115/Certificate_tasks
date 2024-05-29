@@ -15,6 +15,7 @@
     font-size: 40px;
     font-weight: 600;
     line-height: 48px;
+    color: #3B3B3B;
 }
 
 .div__introduce_detail {
@@ -83,14 +84,16 @@
     padding: 120px 0 0 0;
 }
 
-.portfolio__header {
+.portfolio__header,
+.service__header {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 80px;
 }
 
-.portfolio__header h2 {
+.portfolio__header h2,
+.service__header h2 {
     width: 372px;
     position: relative;
     font-size: 32px;
@@ -100,7 +103,8 @@
     justify-content: center;
 }
 
-.portfolio__header h2::before {
+.portfolio__header h2::before,
+.service__header h2::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -110,7 +114,8 @@
     z-index: -1;
 }
 
-.portfolio__header h2 span::before {
+.portfolio__header h2 span::before,
+.service__header h2 span::before {
     content: "";
     position: absolute;
     width: 6px;
@@ -121,7 +126,8 @@
     left: 0;
 }
 
-.portfolio__header h2 span::after {
+.portfolio__header h2 span::after,
+.service__header h2 span::after {
     content: "";
     position: absolute;
     width: 6px;
@@ -132,9 +138,11 @@
     right: 0;
 }
 
-.portfolio__header h2 span {
+.portfolio__header h2 span,
+.service__header h2 span {
     padding: 0 16px;
     background-color: #FFFFFF;
+    color: #3B3B3B;
 }
 
 .portfolio__item {
@@ -290,6 +298,73 @@
     left: 1082px;
 }
 
+.service_introduce {
+    margin-bottom: 80px;
+}
+
+.service-items {
+    max-height: 881px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../image/services-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 312px;
+}   
+
+.service__header h2 {
+    z-index: 1;
+}
+
+.service__header h2 span {
+    background-color: #FAFAFA;
+}
+
+.service_cards {
+    display: flex;
+    column-gap: 24px;
+}
+
+.service_card {
+    width: 306px;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../image/service-item-bg.png);
+    padding: 20px 30px;
+    border-radius: 24px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 42px;
+}
+
+.service_detail h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.6px;
+    color: #3B3B3B;
+    margin-bottom: 40px;
+}
+
+.service_detail button {
+    display: flex;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #000000;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
 @media (min-width: 1025px) and (max-width: 1200px) {}
 
 @media (min-width: 769px) and (max-width: 1024px) {}
@@ -297,7 +372,6 @@
 @media (min-width: 426px) and (max-width: 768px) {}
 
 @media (max-width: 425px) {
-    /* FIXME: 檢查哪個元素超版了 */
     .section__about_me {
         flex-direction: column;
         padding: 0;
