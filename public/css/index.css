@@ -85,7 +85,8 @@
 }
 
 .portfolio__header,
-.service__header {
+.service__header,
+.featured_articles__header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +94,8 @@
 }
 
 .portfolio__header h2,
-.service__header h2 {
+.service__header h2,
+.featured_articles__header h2 {
     width: 372px;
     position: relative;
     font-size: 32px;
@@ -104,7 +106,8 @@
 }
 
 .portfolio__header h2::before,
-.service__header h2::before {
+.service__header h2::before,
+.featured_articles__header h2::before{
     content: "";
     position: absolute;
     width: 100%;
@@ -115,7 +118,8 @@
 }
 
 .portfolio__header h2 span::before,
-.service__header h2 span::before {
+.service__header h2 span::before,
+.featured_articles__header h2 span::before{
     content: "";
     position: absolute;
     width: 6px;
@@ -127,7 +131,8 @@
 }
 
 .portfolio__header h2 span::after,
-.service__header h2 span::after {
+.service__header h2 span::after,
+.featured_articles__header h2 span::after{
     content: "";
     position: absolute;
     width: 6px;
@@ -139,7 +144,8 @@
 }
 
 .portfolio__header h2 span,
-.service__header h2 span {
+.service__header h2 span,
+.featured_articles__header h2 span {
     padding: 0 16px;
     background-color: #FFFFFF;
     color: #3B3B3B;
@@ -302,7 +308,7 @@
     margin-bottom: 80px;
 }
 
-.service-items {
+.section__service-items {
     max-height: 881px;
     display: flex;
     flex-direction: column;
@@ -363,6 +369,62 @@
     line-height: 30px;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.section__featured_articles {
+    max-height: 757px;
+    padding: 120px 0;
+}
+
+.swiper {
+    width: 1296px;
+    height: 398px;
+}
+
+.article_card {
+    width: 416px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article_card img {
+    width: 416px;
+    height: 234px;
+    border-radius: 8px;
+    border-width: 1px solid #ffffff;
+}
+
+.card_description {
+    padding: 0 8px;
+}
+
+.card_description h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #3B3B3B;
+    margin-bottom: 16px;
+}
+
+.article_footer_tag {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags {
+    font-size: 16px;
+    line-height: 24px;
+    color: #3B3B3B;
+    background-color: #F1F1F1;
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+
+.date {
+    font-size: 16px;
+    line-height: 24px;
+    color: #5B5B5B;
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {}
