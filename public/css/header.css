@@ -101,6 +101,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
+    z-index: 1;
 }
 
 @media (min-width: 1025px) and (max-width: 1200px){
@@ -124,7 +125,7 @@ body {
 @media (max-width: 425px) {
     .main-header {
         padding: 8px 12px;
-        z-index: 1;
+        z-index: 2;
     }
 
     .header__navBar {
@@ -134,7 +135,7 @@ body {
         background-color: #ffffff;
         top: 59px;
         left: 0;
-        z-index: 1;
+        z-index: 2;
     }
 
     .header__navBar ul {
