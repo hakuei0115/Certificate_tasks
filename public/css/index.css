@@ -452,9 +452,7 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {}
 
-@media (min-width: 426px) and (max-width: 768px) {}
-
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .section__about_me {
         flex-direction: column;
         padding: 0;
@@ -501,8 +499,13 @@
         height: 40px;
     }
 
+    .about_me_image img {
+        width: 768px;
+        height: auto;
+    }
+
     .section__portfolio {
-        padding: 40px 0 80px 0;
+        padding: 40px 0 0 0;
     }
 
     .portfolio__header,
@@ -521,18 +524,17 @@
     }
 
     .portfolio__item.order_platform {
-        max-height: 578px;
-        margin-bottom: 48px;
+        max-height: 390px;
     }
 
     .order_platform_bg {
-        width: 375px;
+        width: 100%;
         height: 390px;
     }
 
     .portfolio__item.order_platform picture {
         top: 93px;
-        left: 40px;
+        left: 60px;
     }
 
     .portfolio__item.order_platform picture img {
@@ -543,14 +545,9 @@
     .order_platform_content,
     .manage_finances_app_content,
     .clinic_website_content {
-        width: 375px;
-        max-height: 164px;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        border-radius: 0;
-        padding: 0 24px;
-        background-color: transparent;
+        top: 110px;
+        left: 400px;
+        padding: 10px 24px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -578,7 +575,6 @@
         font-size: 20px;
         font-weight: 700;
         line-height: 24px;
-        color: #1E1E1E;
         margin-bottom: 8px;
     }
 
@@ -587,7 +583,6 @@
     .clinic_website__title p {
         font-size: 16px;
         line-height: 24px;
-        color: #5B5B5B;
     }
 
     .order_platform_tags,
@@ -616,9 +611,116 @@
         color: #FFFFFF;
         cursor: pointer;
     }
-
+    
     .portfolio__item.manage_finances_app {
         max-height: 602px;
+    }
+
+    .manage_finances_app_mask {
+        width: 400px;
+        height: 100%;
+        background-color: rgba(10, 16, 19, 0.5);
+    }
+
+    .manage_finances_app_content {
+        width: 375px;
+        top: 200px;
+        left: 10px;
+    }
+
+    .portfolio__item.clinic_website {
+        max-height: 390px;
+    }
+
+    .clinic_website_bg {
+        height: 390px;
+    }
+
+    .portfolio__item.clinic_website picture {
+        top: 90px;
+        left: 40px;
+    }
+
+    .portfolio__item.clinic_website picture img {
+        width: 295px;
+        height: 210px;
+    }
+
+    .section__service-items {
+        padding: 80px 0;
+    }
+
+    .service_card {
+        width: 150px;
+        height: 150px;
+        padding: 0;
+    }
+
+    .service_detail h2 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .service_detail button {
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 425px) {
+    .about_me_image img {
+        width: 375px;
+        height: auto;
+    }
+
+    .section__portfolio {
+        padding: 40px 0 80px 0;
+    }
+
+    .portfolio__item.order_platform {
+        max-height: 578px;
+        margin-bottom: 48px;
+    }
+
+    .order_platform_bg {
+        width: 375px;
+        height: 390px;
+    }
+
+    .portfolio__item.order_platform picture {
+        top: 93px;
+        left: 40px;
+    }
+
+    .order_platform_content,
+    .manage_finances_app_content,
+    .clinic_website_content {
+        width: 375px;
+        max-height: 164px;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+        padding: 0 24px;
+        background-color: transparent;
+    }
+
+    .order_platform__title h3,
+    .manage_finances_app__title h3,
+    .clinic_website__title h3{
+        color: #1E1E1E;
+    }
+
+    .order_platform__title p,
+    .manage_finances_app__title p,
+    .clinic_website__title p {
+        color: #5B5B5B;
+    }
+
+    .portfolio__item.manage_finances_app {
         margin-bottom: 48px;
     }
 
@@ -637,24 +739,8 @@
         max-height: 578px;
     }
 
-    .clinic_website_bg {
-        width: 375px;
-        height: 390px;
-    }
-
-    .portfolio__item.clinic_website picture {
-        top: 90px;
-        left: 40px;
-    }
-
-    .portfolio__item.clinic_website picture img {
-        width: 295px;
-        height: 210px;
-    }
-
     .section__service-items {
         max-height: 1653px;
-        padding: 80px 0;
     }
 
     .service_cards {
@@ -662,17 +748,10 @@
         row-gap: 24px;
     }
 
-    .service_detail h2 {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-    }
-
-    .service_detail button {
-        padding: 8px 16px;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 24px;
+    .service_card {
+        width: 306px;
+        height: 306px;
+        padding: 20px 30px;
     }
 
     .section__featured_articles {
