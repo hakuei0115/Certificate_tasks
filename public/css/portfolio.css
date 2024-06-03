@@ -101,7 +101,7 @@
     padding: 120px 0;
 }
 
-.container {
+.portfolio_container {
     max-width: 1296px;
     display: flex;
     justify-content: center;
@@ -117,6 +117,10 @@
     flex-direction: column;
     gap: 16px;
     margin-bottom: 80px;
+}
+
+.content.item1 {
+    cursor: pointer;
 }
 
 .content__image img {
@@ -179,9 +183,110 @@
     font-weight: 400;
     line-height: 36px;
     color: #3B3B3B;
+    cursor: pointer;
 }
 
 .page_change__button:first-child {
     background-color: #1E1E1E;
     color: #FFFFFF;
+}
+
+.modal-dialog {
+    max-width: 1076px;
+    max-height: 1868px;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal_description_title {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.modal_description_title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+}
+
+.modal_description_title p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #919191;
+}
+
+.modal_description_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 56px;
+}
+
+.modal_description_detail {
+    padding: 0 72px 0 0;
+}
+
+.modal_description_detail p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #1E1E1E;
+    text-align: left;
+}
+
+.modal_description_introduce {
+    padding: 0 0 0 24px;
+    border-left: 1px solid #C1C1C1;
+}
+
+.modal_description_introduce p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #5B5B5B;
+    text-align: center;
+}
+
+.article_main_content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 56px;
+    padding: 80px 0;
+}
+
+.main_content_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_content_image img {
+    display: block;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.main_content_describle {
+    text-align: center;
+}
+
+.main_content_describle h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    margin-bottom: 16px;
+}
+
+.main_content_describle p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #5B5B5B;
 }
