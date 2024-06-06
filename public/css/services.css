@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+.section__service-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../image/services-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+}
+
+.service_introduce {
+    margin-bottom: 80px;
+}
+
+.service__header,
+.process__header,
+.price__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.service__header h2,
+.process__header h2,
+.price__header h2 {
+    width: 372px;
+    position: relative;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.4px;
+    display: flex;
+    justify-content: center;
+}
+
+.service__header h2::before,
+.process__header h2::before,
+.price__header h2::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #c1c1c1;
+    top: calc(50% - 1px);
+    z-index: -1;
+}
+
+
+.service__header h2 span::before,
+.process__header h2 span::before,
+.price__header h2 span::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #c1c1c1;
+    border-radius: 50%;
+    top: calc(50% - 3px);
+    left: 0;
+}
+
+.service__header h2 span::after,
+.process__header h2 span::after,
+.price__header h2 span::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #c1c1c1;
+    border-radius: 50%;
+    top: calc(50% - 3px);
+    right: 0;
+}
+
+.service__header h2,
+.process__header h2 {
+    z-index: 1;
+}
+
+.service__header h2 span,
+.process__header h2 span,
+.price__header h2 span {
+    padding: 0 16px;
+    background-color: #FAFAFA;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.4px;
+    color: #3B3B3B;
+}
+
+.service_cards {
+    display: flex;
+    column-gap: 24px;
+}
+
+.service_card {
+    width: 306px;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../image/service-item-bg.png);
+    padding: 20px 30px;
+    border-radius: 24px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 42px;
+}
+
+.section__service_process {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../image/process-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+}
+
+.process__header h2 span::before,
+.process__header h2 span::after {
+    background-color: #FFFFFF;
+}
+
+.process__header h2 span {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.process_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    color: #FFFFFF;
+}
+
+.process_item {
+    width: 655px;
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    padding: 24px 32px;
+    border-radius: 4px;
+    border: 1px solid #919191;
+    background-color: #3B3B3B;
+}
+
+.process_item_count {
+    font-family: "Tourney";
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 86.4px;
+    color: #919191;
+}
+
+.process_item_content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+    margin-bottom: 8px;
+}
+
+.process_item_content p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #E9E9E9;
+}
+
+.section__service_price {
+    padding: 120px 0;
+}
+
+.price__header h2 span {
+    background-color: #FFFFFF;
+}
+
+.price_cards {
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+}
+
+.price_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+    padding: 32px;
+    border-radius: 8px;
+    background-color: #FAFAFA;
+    box-shadow: 0 4px 8px #00000014;
+}
+
+.price_image {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+    color: #5B5B5B;
+}
+
+.split_line {
+    width: 41px;
+    height: 1px;
+    background-color: #C1C1C1;
+}
+
+.price_card>p {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #1E1E1E;
+}
+
+.price_card>p span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #5B5B5B;
+}
+
+@media (max-width: 1024px) {
+    .service_card {
+        width: 200px;
+        height: 200px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .service__header,
+    .process__header,
+    .price__header {
+        margin-bottom: 40px;
+    }
+
+    .service__header h2,
+    .process__header h2,
+    .price__header h2 {
+        width: 249px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.8px;
+    }
+
+    .service__header h2 span,
+    .process__header h2 span,
+    .price__header h2 span {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.8px;
+    }
+
+    .section__service-items {
+        padding: 80px 0;
+    }
+
+    .service_card {
+        width: 150px;
+        height: 150px;
+        padding: 0;
+    }
+
+    .price_cards {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}
+
+@media (max-width: 425px) {
+    .section__service-items {
+        max-height: 1653px;
+    }
+
+    .service_cards {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    .service_card {
+        width: 306px;
+        height: 306px;
+        padding: 20px 30px;
+    }
+
+    .section__service_process {
+        padding: 80px 0;
+    }
+
+    .process_item {
+        width: 351px;
+        flex-direction: column;
+    }
+
+    .process_item_count {
+        font-size: 48px;
+        line-height: 57.6px;
+    }
+    
+    .process_item_content h3 {
+        font-size: 24px;
+        line-height: 28.8px;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .price_image {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .price_image img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .split_line {
+        width: 28px;
+    }
+
+    .price_card>p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

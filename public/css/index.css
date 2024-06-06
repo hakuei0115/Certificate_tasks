@@ -304,10 +304,6 @@
     left: 1082px;
 }
 
-.service_introduce {
-    margin-bottom: 80px;
-}
-
 .section__service-items {
     max-height: 881px;
     display: flex;
@@ -318,7 +314,11 @@
     background-size: cover;
     background-position: center;
     padding: 120px 312px;
-}   
+}
+
+.service_introduce {
+    margin-bottom: 80px;
+}
 
 .service__header h2 {
     z-index: 1;
