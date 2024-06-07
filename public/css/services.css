@@ -17,7 +17,9 @@
 
 .service__header,
 .process__header,
-.price__header {
+.price__header,
+.sample__header,
+.QA__header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +28,9 @@
 
 .service__header h2,
 .process__header h2,
-.price__header h2 {
+.price__header h2,
+.sample__header h2,
+.QA__header h2 {
     width: 372px;
     position: relative;
     font-size: 32px;
@@ -38,7 +42,9 @@
 
 .service__header h2::before,
 .process__header h2::before,
-.price__header h2::before{
+.price__header h2::before,
+.sample__header h2::before,
+.QA__header h2::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -51,7 +57,9 @@
 
 .service__header h2 span::before,
 .process__header h2 span::before,
-.price__header h2 span::before {
+.price__header h2 span::before,
+.sample__header h2 span::before,
+.QA__header h2 span::before {
     content: "";
     position: absolute;
     width: 6px;
@@ -64,7 +72,9 @@
 
 .service__header h2 span::after,
 .process__header h2 span::after,
-.price__header h2 span::after {
+.price__header h2 span::after,
+.sample__header h2 span::after,
+.QA__header h2 span::after {
     content: "";
     position: absolute;
     width: 6px;
@@ -76,13 +86,16 @@
 }
 
 .service__header h2,
-.process__header h2 {
+.process__header h2,
+.sample__header h2 {
     z-index: 1;
 }
 
 .service__header h2 span,
 .process__header h2 span,
-.price__header h2 span {
+.price__header h2 span,
+.sample__header h2 span,
+.QA__header h2 span {
     padding: 0 16px;
     background-color: #FAFAFA;
     font-size: 32px;
@@ -178,7 +191,8 @@
     padding: 120px 0;
 }
 
-.price__header h2 span {
+.price__header h2 span,
+.QA__header h2 span {
     background-color: #FFFFFF;
 }
 
@@ -229,24 +243,126 @@
     color: #5B5B5B;
 }
 
+.section__service_sample {
+    padding: 120px 0;
+    background-color: #FAFAFA;
+}
+
+.sample__content {
+    max-width: 1296px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 80px;
+    margin: 0 auto;
+}
+
+.sample__card img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    border-width: 1px;
+    margin-bottom: 16px;
+}
+
+.description__text {
+    margin-bottom: 24px;
+}
+
+.description__text h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+    color: #3B3B3B;
+    margin-bottom: 8px;
+}
+
+.description__text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #919191;
+}
+
+.description__hashtags {
+    display: flex;
+    column-gap: 16px;
+}
+
+.tags__item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #3B3B3B;
+    background-color: #F1F1F1;
+    padding: 4px 12px 4px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.section__question_answer {
+    padding: 120px 0;
+}
+
+.question__list {
+    max-width: 1076px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+.question_item {
+    width: 48%;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #E9E9E9;
+}
+
+.question_item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    color: #3B3B3B;
+    margin-bottom: 16px;
+}
+
+.question_item p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #5B5B5B;
+}
+
 @media (max-width: 1024px) {
     .service_card {
         width: 200px;
         height: 200px;
         padding: 0;
     }
+
+    .price_cards {
+        flex-direction: column;
+        row-gap: 24px;
+    }
 }
 
 @media (max-width: 768px) {
     .service__header,
     .process__header,
-    .price__header {
+    .price__header,
+    .sample__header,
+    .QA__header {
         margin-bottom: 40px;
     }
 
     .service__header h2,
     .process__header h2,
-    .price__header h2 {
+    .price__header h2,
+    .sample__header h2,
+    .QA__header h2 {
         width: 249px;
         font-size: 24px;
         font-weight: 700;
@@ -255,7 +371,9 @@
 
     .service__header h2 span,
     .process__header h2 span,
-    .price__header h2 span {
+    .price__header h2 span,
+    .sample__header h2 span,
+    .QA__header h2 span {
         font-size: 24px;
         font-weight: 700;
         line-height: 28.8px;
@@ -331,5 +449,59 @@
     .price_card>p {
         font-size: 20px;
         line-height: 30px;
+    }
+
+    .section__service_sample {
+        padding: 80px 0;
+    }
+
+    .sample__content {
+        max-width: 95%;
+        column-gap: 0;
+        row-gap: 48px;
+    }
+
+    .description__text {
+        margin-bottom: 16px;
+    }
+    
+    .description__text h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .description__hashtags {
+        column-gap: 8px;
+    }
+    
+    .tags__item {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #3B3B3B;
+        background-color: #F1F1F1;
+        padding: 4px 12px;
+        border-radius: 16px;
+        cursor: pointer;
+    }
+
+    .section__question_answer {
+        padding: 80px 0;
+    }
+
+    .question_item {
+        width: 95%;
+    }
+    
+    .question_item h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .question_item p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #5B5B5B;
     }
 }
