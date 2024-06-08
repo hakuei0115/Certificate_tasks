@@ -227,6 +227,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             const url = window.location.pathname;
             const navItems = document.querySelectorAll('.header__navBar ul li a');
+            const ul = document.querySelectorAll('.blog__content ul')[0];
+            const lis = ul.querySelectorAll('li');
 
             navItems.forEach(item => {
                 if (item.getAttribute('href') === url) {
@@ -235,6 +237,14 @@
                         border.style.opacity = '1';
                     })
                 }
+            });
+
+            lis.forEach(function(li, index) {
+                li.addEventListener('click', function() {
+                    if (index === 0) {
+                        window.location.href = '/blog_page.html';
+                    }
+                });
             });
         });
 
